@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="violet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayur Vitekar | Aspiring Frontend & Software Engineer</title>
+  <meta name="description" content="Portfolio of Mayur Vitekar, a Computer Software Engineering student specializing in React, Next.js, JavaScript, Spring Boot, and Web Technologies." />
+  <meta name="keywords" content="Mayur Vitekar, Frontend Developer, Software Engineer, React, Next.js, JavaScript, Spring Boot, Java, Portfolio" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mayur Vitekar | Aspiring Frontend & Software Engineer" />
+  <meta property="og:description" content="Computer Software Engineering student passionate about building responsive web apps and clean architecture." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <!-- Canvas Background for Particles -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Main Navigation Header -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-icon"><i class="ri-code-s-slash-line"></i></span>
+        <span class="logo-text">Mayur<span class="text-accent">.dev</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link"><i class="ri-user-3-line"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="ri-cpu-line"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="ri-layout-grid-line"></i> Projects</a>
+        <a href="#experience" class="nav-link"><i class="ri-briefcase-4-line"></i> Experience</a>
+        <a href="#contact" class="nav-link"><i class="ri-mail-send-line"></i> Contact</a>
+      </nav>
+
+      <!-- Header Controls: Accent Switcher & Theme Toggle -->
+      <div class="nav-controls">
+        <div class="accent-picker" title="Customize Accent Color">
+          <button class="accent-btn accent-violet active" data-accent="violet" aria-label="Violet Accent"></button>
+          <button class="accent-btn accent-cyan" data-accent="cyan" aria-label="Cyan Accent"></button>
+          <button class="accent-btn accent-amber" data-accent="amber" aria-label="Amber Accent"></button>
+          <button class="accent-btn accent-emerald" data-accent="emerald" aria-label="Emerald Accent"></button>
+        </div>
+
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light/Dark Theme">
+          <i class="ri-sun-line light-icon"></i>
+          <i class="ri-moon-clear-line dark-icon"></i>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+          <i class="ri-menu-3-line open-icon"></i>
+          <i class="ri-close-line close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for Software Engineering Internships & Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Mayur Vitekar</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-prefix">I build </span>
+            <span id="typed-text" class="typed-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-description" id="hero-bio">
+            Computer Software Engineering student at CSMSS Chh. Shahu College (Expected 2028). Passionate about building responsive web applications, integrating APIs, clean architecture, and user-centric design.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Featured Work</span>
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="ri-chat-3-line"></i>
+              <span>Let's Connect</span>
+            </a>
+            <a href="/assets/Mayur_Vitekar_Resume.html" target="_blank" class="btn btn-outline" id="download-cv-btn" download="Mayur_Vitekar_Resume.html">
+              <i class="ri-file-download-line"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-socials" id="hero-social-links">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-card-wrapper glass-panel">
+            <div class="code-card-header">
+              <div class="mac-buttons">
+                <span class="mac-btn red"></span>
+                <span class="mac-btn yellow"></span>
+                <span class="mac-btn green"></span>
+              </div>
+              <span class="code-filename"><i class="ri-terminal-box-line"></i> developer.ts</span>
+            </div>
+            <div class="code-card-body">
+              <pre><code><span class="token-keyword">const</span> <span class="token-variable">developer</span> = {
+  <span class="token-property">name</span>: <span class="token-string">'Mayur Vitekar'</span>,
+  <span class="token-property">github</span>: <span class="token-string">'@one8alpha'</span>,
+  <span class="token-property">title</span>: <span class="token-string">'Aspiring Java & Frontend Developer'</span>,
+  <span class="token-property">education</span>: <span class="token-string">'B.Tech CSE (Expected 2028)'</span>,
+  <span class="token-property">coreStack</span>: [<span class="token-string">'Java'</span>, <span class="token-string">'Spring Boot'</span>, <span class="token-string">'React'</span>, <span class="token-string">'Next.js'</span>, <span class="token-string">'Python'</span>],
+  <span class="token-property">status</span>: <span class="token-string">'Seeking Engineering Internships 🚀'</span>
+};
+
+<span class="token-keyword">export default</span> developer;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counter Bar -->
+      <div class="container">
+        <div class="stats-bar glass-panel" id="stats-container">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle"><i class="ri-user-star-line"></i> Bio & Philosophy</span>
+          <h2 class="section-title">Bridging Code Architecture & Seamless UX</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-column">
+            <p class="about-paragraph">
+              I am a passionate Computer Software Engineering undergraduate at CSMSS Chh. Shahu College (Expected June 2028). With a strong foundation in JavaScript, React, and Next.js, I specialize in creating responsive web applications and connecting REST APIs with backend services.
+            </p>
+            <p class="about-paragraph">
+              My approach focuses on clean architecture, intuitive UI design, active open-source participation (GSSoC & EaseMotion CSS), and leadership in team projects like Farmigo.
+            </p>
+
+            <div class="highlights-grid">
+              <div class="highlight-item glass-card">
+                <div class="highlight-icon"><i class="ri-code-s-slash-line"></i></div>
+                <div>
+                  <h4 class="highlight-title">Frontend Excellence</h4>
+                  <p class="highlight-desc">React, Next.js, Tailwind CSS, TypeScript, and modern responsive web layouts.</p>
+                </div>
+              </div>
+              <div class="highlight-item glass-card">
+                <div class="highlight-icon"><i class="ri-server-line"></i></div>
+                <div>
+                  <h4 class="highlight-title">Backend & Microservices</h4>
+                  <p class="highlight-desc">Spring Boot, Apache Kafka, H2 SQL, Firebase, and REST Incentive API integrations.</p>
+                </div>
+              </div>
+              <div class="highlight-item glass-card">
+                <div class="highlight-icon"><i class="ri-cpu-line"></i></div>
+                <div>
+                  <h4 class="highlight-title">Core CS Fundamentals</h4>
+                  <p class="highlight-desc">Object-Oriented Programming (OOP), Data Structures & Algorithms (DSA), Git, and Maven.</p>
+                </div>
+              </div>
+              <div class="highlight-item glass-card">
+                <div class="highlight-icon"><i class="ri-team-line"></i></div>
+                <div>
+                  <h4 class="highlight-title">Leadership & Community</h4>
+                  <p class="highlight-desc">Team Lead at Farmigo, GSSoC contributor, SIH participant, and Microsoft Student Community member.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="ri-tools-line"></i> Technical Arsenal</span>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <p class="section-desc">A curated snapshot of tools, languages, and frameworks I use to build production systems.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-tabs" id="skill-category-tabs">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle"><i class="ri-folder-code-line"></i> Featured Works</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-desc">Explore recent full-stack applications, open-source tools, and cloud platforms I've designed and deployed.</p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="category-tabs" id="project-filter-tabs">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience & Timeline Section -->
+    <section id="experience" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="ri-history-line"></i> Academic & Career Journey</span>
+          <h2 class="section-title">Education & Leadership Experience</h2>
+        </div>
+
+        <div class="timeline-wrapper" id="timeline-container">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Recommendations Section -->
+    <section id="testimonials" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="ri-award-line"></i> Highlights & Feedback</span>
+          <h2 class="section-title">Certifications & Achievements</h2>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle"><i class="ri-send-plane-line"></i> Get In Touch</span>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <p class="section-desc">Have an upcoming project, a senior role offer, or just want to connect? Send a message below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-column">
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="ri-mail-volume-line"></i></div>
+              <div class="contact-details">
+                <span class="contact-label">Email Me</span>
+                <a href="mailto:vitekarmayur76@gmail.com" class="contact-value" id="email-copy-trigger">vitekarmayur76@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" title="Copy Email Address">
+                <i class="ri-file-copy-line"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="ri-map-pin-2-line"></i></div>
+              <div class="contact-details">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Chhatrapati Sambhajinagar, Maharashtra, India</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon"><i class="ri-time-line"></i></div>
+              <div class="contact-details">
+                <span class="contact-label">Working Hours & Response</span>
+                <span class="contact-value">Mon – Fri / Usually responds within 12 hours</span>
+              </div>
+            </div>
+
+            <div class="social-connect-box glass-card">
+              <h4>Follow & Connect</h4>
+              <div class="contact-social-links" id="contact-socials">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-column glass-panel">
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Full Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="ri-user-3-line input-icon"></i>
+                    <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+                  </div>
+                  <span class="error-msg" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Email Address <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="ri-mail-line input-icon"></i>
+                    <input type="email" id="form-email" name="email" placeholder="john@company.com" required />
+                  </div>
+                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <div class="input-wrapper">
+                  <i class="ri-bookmark-line input-icon"></i>
+                  <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry / Job Opportunity" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="ri-chat-1-line input-icon textarea-icon"></i>
+                  <textarea id="form-message" name="message" rows="5" placeholder="Tell me about your project, timelines, or role expectations..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please provide a message (min 10 characters)</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <i class="ri-send-plane-fill"></i>
+                <div class="spinner" id="form-spinner"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-text">Mayur<span class="text-accent">.dev</span></span>
+        </a>
+        <p class="footer-tagline">Crafted with precision, code, and care.</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="copyright">&copy; <span id="current-year"></span> Mayur Vitekar. All rights reserved.</p>
+      </div>
+
+      <div class="footer-right">
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+          <i class="ri-arrow-up-line"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal Dialog -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-container glass-panel">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close Modal">
+        <i class="ri-close-line"></i>
+      </button>
+      
+      <div class="modal-header">
+        <div class="modal-badge-list" id="modal-tags"></div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-subtitle" id="modal-subtitle"></p>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image-preview" id="modal-image-box"></div>
+
+        <div class="modal-description-box">
+          <h3>Overview & Architecture</h3>
+          <p id="modal-description"></p>
+          
+          <h3>Key Features</h3>
+          <ul class="modal-features-list" id="modal-features"></ul>
+
+          <h3>Tech Stack & Tools</h3>
+          <div class="modal-tech-pills" id="modal-tech-stack"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-live-link">
+          <i class="ri-external-link-line"></i>
+          <span>Live Demo</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-repo-link">
+          <i class="ri-github-fill"></i>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

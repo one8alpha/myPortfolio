@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayur Vitekar - Resume</title>
+  <style>
+    :root {
+      --primary: #1e293b;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      background: #f8fafc;
+      padding: 2rem 1rem;
+    }
+    .resume-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+    .header { text-align: center; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1.5rem; }
+    .name { font-size: 2.2rem; font-weight: 700; color: var(--primary); margin-bottom: 0.25rem; }
+    .subtitle { font-size: 1rem; color: var(--text-light); margin-bottom: 0.75rem; }
+    .contact-info { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem; }
+    .contact-info a { color: var(--accent); text-decoration: none; }
+    
+    .section { margin-bottom: 1.75rem; }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .summary-text { font-size: 0.95rem; }
+    
+    .item { margin-bottom: 1rem; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; font-weight: 600; font-size: 1rem; color: var(--primary); }
+    .item-sub { font-size: 0.9rem; color: var(--text-light); font-style: italic; margin-bottom: 0.35rem; }
+    
+    ul { padding-left: 1.25rem; font-size: 0.9rem; }
+    li { margin-bottom: 0.3rem; }
+    
+    .skills-group { display: grid; grid-template-columns: 140px 1fr; gap: 0.5rem; font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .skills-label { font-weight: 600; color: var(--primary); }
+    
+    .actions-bar {
+      max-width: 800px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+    .btn-print {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-print:hover { opacity: 0.9; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .resume-card { box-shadow: none; border: none; padding: 0; }
+      .actions-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions-bar">
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-card">
+    <header class="header">
+      <h1 class="name">Mayur Vitekar</h1>
+      <p class="subtitle">Chhatrapati Sambhajinagar, Maharashtra, India</p>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:vitekarmayur76@gmail.com">vitekarmayur76@gmail.com</a></span>
+        <span>🔗 <a href="https://linkedin.com/in/vitekarmayur" target="_blank">linkedin.com/in/vitekarmayur</a></span>
+        <span>💻 <a href="https://github.com/one8alpha" target="_blank">github.com/one8alpha</a></span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Summary</h2>
+      <p class="summary-text">
+        Aspiring Frontend Developer with strong foundations in JavaScript, React, and Next.js. Experienced in building responsive, scalable web applications and integrating APIs with backend services. Passionate about clean architecture, user-centric design, and contributing to innovative projects.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>B.Tech in Computer Software Engineering</span>
+          <span>Expected June 2028</span>
+        </div>
+        <div class="item-sub">CSMSS Chh. Shahu College</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>HSC (Higher Secondary Certificate) — 69%</span>
+        </div>
+        <div class="item-sub">Chhatrapati School & Junior College</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>SSC (Secondary School Certificate) — 92.8%</span>
+        </div>
+        <div class="item-sub">Chhatrapati School & Junior College</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      
+      <div class="item">
+        <div class="item-header">
+          <span>JPMorgan Chase Software Engineering Job Simulation (Forage)</span>
+          <span>July 2026</span>
+        </div>
+        <ul>
+          <li>Integrated Kafka into Spring Boot microservices for high-volume transaction processing.</li>
+          <li>Designed Spring Data JPA models with H2 SQL database for validation and persistence.</li>
+          <li>Connected external REST Incentive API to enhance transactional workflows.</li>
+          <li>Developed REST endpoints for querying balances with clean architectural boundaries.</li>
+          <li>Ensured reliability via Maven test suites and debugger-driven inspection.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Taskwise Management System</span>
+        </div>
+        <ul>
+          <li>Built a Next.js task management app with Firebase hosting & backend integration.</li>
+          <li>Implemented modular components with TypeScript for scalability.</li>
+          <li>Designed responsive UI using Tailwind CSS, improving usability across devices.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-group">
+        <span class="skills-label">Frontend:</span>
+        <span>HTML, CSS, JavaScript, React, Next.js</span>
+      </div>
+      <div class="skills-group">
+        <span class="skills-label">Backend/Database:</span>
+        <span>Firebase, Spring Boot, H2 SQL</span>
+      </div>
+      <div class="skills-group">
+        <span class="skills-label">Core Concepts:</span>
+        <span>OOP, DSA, REST APIs, Microservices</span>
+      </div>
+      <div class="skills-group">
+        <span class="skills-label">Tools:</span>
+        <span>Git, GitHub, Maven, Tailwind CSS</span>
+      </div>
+      <div class="skills-group">
+        <span class="skills-label">Other:</span>
+        <span>Responsive Web Design, Debugging, Agile Collaboration</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Leadership & Achievements</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Team Lead — Farmigo</span>
+        </div>
+        <ul>
+          <li>Directed cross-functional teams, ensuring timely project delivery.</li>
+          <li>Mentored peers, streamlined workflows, and boosted efficiency.</li>
+          <li>Championed innovation and collaboration across projects.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Additional Highlights</h2>
+      <ul>
+        <li><strong>Certifications:</strong> Forage JPMorgan Chase Simulation</li>
+        <li><strong>Open Source:</strong> Contributions to EaseMotion CSS, GSSoC participation</li>
+        <li><strong>Hackathons:</strong> SIH, Kaggle AI Agents</li>
+        <li><strong>Community:</strong> Microsoft Student Developer Community</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
